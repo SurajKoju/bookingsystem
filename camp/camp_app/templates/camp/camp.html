@@ -1,0 +1,47 @@
+{% load static %}
+{% include 'header.html' %}
+
+<h2 class = "text-center" id = "db_camp_title">{{camp_name}}</h2>
+
+
+    <form id="availability-form" method="post"  >
+        {% csrf_token %}
+        {{ availability_form.as_p }}
+        <button type="submit">Check Availability</button>
+        </form>
+
+<p class="py-3">{{ availability_message }}</p>
+
+
+
+
+
+{% if status == "available" %}       
+<p class="py-3">{{ availability_message }}</p>
+
+<form method="post">
+    {% csrf_token %}
+    {{ booking_form.as_p }}
+    <button type="submit">Book Now</button>
+    </form>
+
+{% else %}
+<p class="py-3">{{ availability_message }}</p>
+{% endif %}
+
+
+
+
+<script>
+window.onload = function() {
+    var campName = document.getElementById('db_camp_title').innerText;
+    document.getElementById('camp_name').value = campName;
+};
+
+function checkAvailability() {
+    var bookingDate = document.getElementById('booking-date').value;
+    var campName = document.getElementById('camp_name').value;        
+}
+</script>
+
+{% include 'footer.html' %}

@@ -1,0 +1,42 @@
+{% load static %}
+{% include 'header.html' %}
+
+
+
+<form id="availability-form" method="post"  >
+    {% csrf_token %}
+    {{ availability_form.as_p }}
+    <button type="submit">Check Availability</button>
+</form>
+
+{{status}}
+
+{% if status == "available" %}       
+    <p class="py-3">{{ availability_message }}</p>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ booking_form.as_p }}
+        <button type="submit">Book Now</button>
+    </form>
+
+{% else %}
+
+    <p class="py-3">{{ availability_message }}</p>
+
+{% endif %}
+
+
+
+<script>
+    window.onload = function() {
+    var campName = document.getElementById('db_camp_title').innerText.trim();
+    document.getElementById('id_camp_name').value = campName;
+    document.getElementById('id_camp_name').value = camp_name;
+
+    
+};
+</script>
+
+
+{% include 'footer.html' %}

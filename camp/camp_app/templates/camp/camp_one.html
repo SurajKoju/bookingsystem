@@ -1,0 +1,13 @@
+{% load static %}
+{% include 'header.html' %}
+
+<h2 class = "text-center" id = "db_camp_title">{{camp_name}}</h2>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.camp_name.as_hidden }}  <!-- Add hidden field for camp_name -->
+    {{ form.as_p }}
+    <button type="submit">Book Now</button>
+</form>
+
+{% include 'footer.html' %}
