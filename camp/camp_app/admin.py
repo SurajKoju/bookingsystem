@@ -15,7 +15,7 @@ from camp_app.models import Booking
 
 @admin.register(Booking)
 class BookingAdmin(admin.ModelAdmin):        
-    list_display = ['camp_name','full_name', 'address', 'mobile_number', 'email_address', 'number_of_people', 'get_payment_method', 'booking_date']
+    list_display = ['full_name', 'camp_name', 'booking_date', 'mobile_number', 'number_of_people', 'get_payment_method', 'email_address', 'address']
     list_filter = ['booking_date']
     search_fields = ['mobile_number']
     

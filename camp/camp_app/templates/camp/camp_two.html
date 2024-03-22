@@ -3,32 +3,33 @@
 
 <h2 class = "text-center" id = "db_camp_title">{{camp_name}}</h2>
 
-{% comment %} {% include 'book/availability_form.html' %} {% endcomment %}
-
-
  <form method="post" id = "available-form">
     {% csrf_token %}
     {{ availability_form.as_p }}
     <button type="submit" name="availability_submit">Check Availability</button>
 </form>
 
+{{status}}
 
-{% if status == "available" %}       
-    <style>
-        #available-form{
-            display: none;
-        }
-    </style>
+    {% if status == "Not available" %}   
+        
+    <p class="py-3">{{ availability_message }}</p>
 
-    <p class="py-3">{{ availability_message }}</p>
-    <form method="post">
-        {% csrf_token %}
-        {{ booking_form.as_p }}
-        <button type="submit" name="booking_submit">Book Now</button>
-    </form>
-{% else %}
-    <p class="py-3">{{ availability_message }}</p>
-{% endif %}
+    {% else %}
+        <style>
+            #available-form{
+                display: none;
+            }
+        </style>
+
+        <p class="py-3">{{ availability_message }}</p>
+        <form method="post">
+            {% csrf_token %}
+            {{ booking_form.as_p }}
+            <button type="submit" name="booking_submit">Book Now</button>
+        </form>
+
+    {% endif %}
 
 
 {% include 'footer.html' %}

@@ -68,11 +68,10 @@ def camp_two(request):
     booking_form = BookingForm(initial=initial_data)
     
     availability_message = ""  
-    status = "available"  
+    status = "Not available"
 
 
     if request.method == 'POST':
-        # Check if the availability form is being submitted
         if 'availability_submit' in request.POST:
             availability_form = AvailabilityCheckForm(request.POST)
             if availability_form.is_valid():
@@ -84,6 +83,7 @@ def camp_two(request):
                     status = "Not available"
                     availability_message = f"{selected_camp_name} is not available on {selected_date}. Please choose any other date"
                 else:
+                    status = "available"
                     availability_message = f"{selected_camp_name} is available on {selected_date}. Make a Booking by filling the form below."
         
         # Check if the booking form is being submitted
@@ -102,6 +102,7 @@ def camp_two(request):
         'booking_form': booking_form,
         'availability_message': availability_message,
         'status': status,
+        'camp_name': camp_name
     }
 
     return render(request, 'camp/camp_two.html', context)
