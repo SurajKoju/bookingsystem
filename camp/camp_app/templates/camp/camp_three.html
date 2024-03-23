@@ -35,9 +35,11 @@
             {% csrf_token %}
             {{ booking_form.as_p }}
             <input type="hidden" id = "hidden_package_amount" name="hidden_package_amount">
-            <p class = "fw-bold fst-italic">*Please use the same contact number that will be used for payment in next step. Thank you!</p>
-            <button type="submit" name="booking_submit">Book Now</button>
+            <button type="submit" name="booking_submit">Book Now</button>   
         </form>
+        <p class = "fw-bold fst-italic">*Please use the same contact number that will be used for payment in next step. Thank you!</p>
+
+        
     </div>
                 <div class = "col-lg-4 col-md-4 col-sm-12">
     <p> Your Total Price will be : <span class = "fw-bold" id = "package_amount"></span></p>
