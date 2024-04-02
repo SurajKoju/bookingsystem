@@ -1,0 +1,20 @@
+.footer_section{
+    background: #E3533F;
+    padding: 10px 0px;
+    margin-top: -10px;
+}
+
+.footer_section .footer_content{
+    width: 100%;
+    max-width: 40%;
+    margin: auto;
+}
+
+.footer_section .footer_content .description{
+    font-size: 14px;
+}
+
+.footer_section .footer_content svg{
+    width: 20px;
+}
+

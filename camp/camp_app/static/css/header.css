@@ -1,10 +1,13 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); */
+@import url("index.css");
+@import url("footer.css");
+
 
 @font-face {
-  font-family: Bebas;
-  font-style: normal;
-  src: url(../fonts/Bebas/BebasNeue-Regular.woff) format('woff');
-  src: url(../fonts/Bebas/BebasNeue-Regular.ttf);
+  font-family: Libre_Franklin;
+  font-style: bold;
+  font-weight: 900;
+  src: url(../fonts/Libre_Franklin/LibreFranklin-Black.woff2) format('woff2');
 }
 
 /* latin */
@@ -55,7 +58,46 @@ body{
   font-family: 'Raleway Regular';
 }
 
-h4{
-  font-family: Bebas, sans-serif; 
+p, h1, h2, h3, h4, h5, h6{
+  margin: 0;
 }
 
+a{
+  text-decoration: none!important;
+  cursor: pointer;
+}
+
+button{
+  background: #E3533F;
+  padding: 10px 40px;
+  color: #fff;
+  border: 0;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  margin-top: 20px;
+}
+
+::selection {
+  background-color: #E3533F; /* Change to the desired background color */
+  color: #fff; /* Change to the desired text color */
+  font-weight: bold;
+}
+
+.app-camp_app.model-booking.change-list{
+  font-family: 'Raleway Medium', sans-serif;
+}
+
+.bigscreen_navbar{
+  background-color: #E3533F;
+}
+
+.navmenu_links a{
+  color: #000;
+  font-family: 'Raleway Medium', sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.navmenu_links a:hover{
+  color: #fff;
+}

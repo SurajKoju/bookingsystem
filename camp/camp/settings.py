@@ -100,3 +100,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 CSRF_TRUSTED_ORIGINS = ["https://localhost:8000"]
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'surajkoju22@gmail.com' # Admin Email
+EMAIL_HOST_PASSWORD = 'aiekgtngxrrnaaze'  
+DEFAULT_FROM_EMAIL = 'surajkoju22@gmail.com'  # Admin Email to Send Email and uses the app password

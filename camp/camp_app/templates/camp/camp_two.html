@@ -1,85 +1,126 @@
 {% load static %}
 {% include 'header.html' %}
 
+
+
+
+
+
+
+
+<div class = "camp_banner">
+    <div class = "container-fluid p-0">
+        <img src = "{% static 'images/camp/Camp3_Banner.jpg' %}" class = "img-fluid banner_image">
+
+        <div class = "yellow_banner_title">
+            Camp <span class = "yellow_span d-block">Two</span>
+        </div>
+    </div>
+</div>
+
+<div class = "about_camp">
+    <div class = "container">
+        <div class = "row align-items-center">
+            <div class = "col-12 pb-5">
+                    <h4 class ="title text-center"><span class = "title_span">About </span> {{camp_name}}</h4>
+            </div>
+
+            <div class = "col-6">
+                <p class = "description">Welcome to XYZ Camp, where the beauty of nature meets the joy of camping. Nestled in the heart of nature, our campsite is a haven for outdoor enthusiasts, families, and friends seeking unforgettable experiences in the great outdoors. At XYZ CAmp, we believe in the transformative power of nature. Our mission is to provide a serene and welcoming environment for everyone to connect with the wilderness, unwind, and create lasting memories. Whether you're a seasoned camper or a first-timer, our site offers a range of amenities and activities that cater to all levels of outdoor enthusiasts.</p>
+                </div>
+
+                <div class = "col-6">
+                    <img src = "{% static 'images/Make a Memory.png' %}" class = "img-fluid">
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+<div class = "camp_availability_form">
+<div class = "title text-center pb-5"> Check <span class = "title_span">Availability</span> </div>
+
 <div class = "form">
     <div class = "container">
-<h2 class = "text-center" id = "db_camp_title">{{camp_name}}</h2>
+        <h2 class = "d-none" id = "db_camp_title">{{camp_name}}</h2>
+        <form method="post" id = "available-form">
+            {% csrf_token %}
+            {{ availability_form.as_p }}
+            <button type="submit" name="availability_submit" class = "d-block m-auto">Check</button>
+        </form>
 
- <form method="post" id = "available-form">
-    {% csrf_token %}
-    {{ availability_form.as_p }}
-    <button type="submit" name="availability_submit">Check Availability</button>
-</form>
+        {% if status == "Not available" %}           
+            
+            <p class="text-center py-3 fw-bold">{{ availability_message }}</p>
 
-
-
-
-    {% if status == "Not available" %}   
-        
-    <p class="py-3 fw-bold">{{ availability_message }}</p>
-
-    {% else %}
-        <style>
-            #available-form{
-                display: none;
-            }
-        </style>
-
-
+        {% else %}
+            <style>
+                #available-form{
+                    display: none;
+                }   
+            </style>
 
             <div class = "row">
                 <div class = "col-lg-8 col-md-8 col-sm-12">
-        <p class="py-3 fw-bold">{{ availability_message }}</p>
+                    <p class="py-3 fw-bold text-center">{{ availability_message }}</p>
 
-        <form method="post" id = "booking-form">
-            {% csrf_token %}
-            {{ booking_form.as_p }}
-            <input type="hidden" id = "hidden_package_amount" name="hidden_package_amount">
-            <p class = "fw-bold fst-italic">*Please use the same contact number that will be used for payment in next step. Thank you!</p>
-            <button type="submit" name="booking_submit">Book Now</button>
-        </form>
-    </div>
-                <div class = "col-lg-4 col-md-4 col-sm-12">
-    <p> Your Total Price will be : <span class = "fw-bold" id = "package_amount"></span></p>
+                    <form method="post" id = "booking-form">
+                        {% csrf_token %}
+                        {{ booking_form.as_p }}
+                        <input type="hidden" id = "hidden_package_amount" name="hidden_package_amount">
+                        <p class = " text-center fw-bold fst-italic">*Please use the same contact number that will be used for payment in next step. Thank you!</p>
+                        <button type="submit" name="booking_submit">Book Now</button>
+                    </form>
                 </div>
-            </div>
+                
+                <div class = "col-lg-4 col-md-4 col-sm-12">
+                    <p class = "text-center"> Your Total Price will be : <span class = "fw-bold title_span" id = "package_amount"></span></p>
+                </div>
     </div>
-
-
-
-    {% endif %}
+</div>
+{% endif %}
 </div>
 </div>
-
-    <script>
-        // Function to calculate and update the total price
-        function calculateTotalPrice() {
-            var peopleNumber = document.getElementById('id_number_of_people').value;
-            var selectPackage = document.getElementById('id_package').value;
-            var totalPrice;
-    
-            // Calculate total price based on the selected package and number of people
-            if (selectPackage == "basic") {
-                totalPrice = peopleNumber * 800;
-            } else if (selectPackage == "medium") {
-                totalPrice = peopleNumber * 1200;
-            } else if (selectPackage == "deluxe") {
-                totalPrice = peopleNumber * 1800;
-            }
-    
-            // Update the total price in the HTML
-            document.getElementById('package_amount').textContent = totalPrice;
-            document.getElementById('hidden_package_amount').value = totalPrice;
-
-        }
-    
-        document.getElementById('id_package').addEventListener('change', calculateTotalPrice);
-        document.getElementById('id_number_of_people').addEventListener('input', calculateTotalPrice);
-        calculateTotalPrice();
+</div>
 
 
-    </script>
+<div class = "camp_gallery">   
+    <div class = "container"> 
+        <h4 class = "title text-center pb-5"> <span class = "title_span">Gallery</span> </h4>
+
+    <a data-fancybox="gallery" data-src="https://lipsum.app/id/2/1024x768" data-caption="">
+      <img src="https://lipsum.app/id/2/200x150" />
+    </a>
+
+    <a data-fancybox="gallery" data-src="https://lipsum.app/id/3/1024x768">
+      <img src="https://lipsum.app/id/3/200x150" />
+    </a>
+
+    <a data-fancybox="gallery" data-src="https://lipsum.app/id/4/1024x768">
+      <img src="https://lipsum.app/id/4/200x150" />
+    </a>
+
+    <a data-fancybox="gallery" data-src="https://lipsum.app/id/2/1024x768" data-caption="">
+        <img src="https://lipsum.app/id/2/200x150" />
+    </a>
+  
+    <a data-fancybox="gallery" data-src="https://lipsum.app/id/3/1024x768">
+        <img src="https://lipsum.app/id/3/200x150" />
+    </a>
+
+    <a data-fancybox="gallery" data-src="https://lipsum.app/id/4/1024x768">
+        <img src="https://lipsum.app/id/4/200x150" />
+    </a>
+  </div>
+  </div>
+
+
+
     
+  {% include 'inc/gmap.html' %}
 
 
 {% include 'footer.html' %}

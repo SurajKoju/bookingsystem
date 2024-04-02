@@ -1,0 +1,426 @@
+.welcome_section, .tiles_section, .camp_availability_form, .about_camp{
+  padding: 100px 0px;
+}
+
+.slider_section, .map_section{
+padding: 150px 0px;
+}
+
+/* Treasure Map */
+ .treasure_map{
+  background: #f9f8fd;
+}
+
+.treasure_map .map_bg{
+  display: block;
+  margin: auto;
+  position: relative;
+}
+
+.treasure_map .map_bg .bg{
+  width: 100%;
+  max-width: 80%;
+}
+
+.treasure_map .map_icons{
+position: absolute;
+width: 100%;
+max-width: 6%;
+cursor: pointer;
+}
+
+.treasure_map #camp1{
+  top: 20%;
+  left: 20%;
+  transform: translateX(10%);
+}
+
+.treasure_map #camp2{
+  top: 50%;
+  left: 40%;
+  transform: translateX(10%);
+}
+
+.treasure_map #camp3{
+  top: 60%;
+  left: 70%;
+  transform: translateX(10%);
+}
+
+.treasure_map #camp4{
+  top: 80%;
+  left: 40%;
+  transform: translateX(10%);
+}
+
+.camp1_popup, .camp2_popup{
+  display: none;
+  position: absolute;
+  width: 100%;
+  max-width: 240px;
+  border-radius: 20px;
+  background: #fff;
+  padding: 20px 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.camp1_popup{
+  top: 10%;
+  left: 32%;
+  transform: translateX(10%);
+}
+
+.camp2_popup{
+  top: 30%;
+  left: 45%;
+  transform: translateX(10%);
+}
+
+.camp2_popup svg.left_icon{
+  position: absolute;
+  left: -5%;
+  top: 40%;
+  font-size: 36px;
+  color: #fff;
+  width: 20px;
+
+}
+
+
+.camp1_popup svg.left_icon{
+  position: absolute;
+  top: 32%;
+  left: -5%;
+  font-size: 36px;
+  color: #E3533F;
+  width: 20px;
+}
+
+.close_btn{
+  float: right;
+  cursor: pointer;
+  width: 20px;
+}
+
+
+.title{
+    color: #000;
+    font-family: 'Raleway Bold', sans-serif;
+    font-size: 34px;
+    line-height: 44px;
+    text-decoration: none;
+}
+
+.title_span{
+    color: #E3533F;
+}
+
+.description{
+    color: #000;
+    font-family: 'Raleway Regular', sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.paragraph{
+    color: #000;
+    font-family: 'Raleway Regular', sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.h4_title{
+    color: #000;
+    font-family: 'Raleway SemiBold', sans-serif;
+    font-size: 24px;
+    line-height: 34px;
+}
+
+.description span{
+    font-weight: bold;
+}
+
+
+
+.paragraph{
+    font-family: 'Raleway Light ', sans-serif;
+}
+
+
+/* Slider CSS */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #E3533F;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+  }
+  
+  .next {
+    right: 0;
+  }
+  
+  .active {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fadeout {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fadeout {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  .explore_section{     
+    background: url(/static/images/explore.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 600px;
+    padding: 40px;
+    background-position: bottom;
+    position: relative;
+  }
+
+  .explore_section .explore_content{
+    position: absolute;
+    bottom: 50px;
+    right: 150px;
+    padding: 40px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 20%;
+  }
+
+
+  /* Selected Camp */
+
+  .camp_banner{
+    position: relative;
+  }
+
+  .camp_banner .banner_image{
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .camp_banner .yellow_banner_title{
+    font-family: 'Libre_Franklin', sans-serif;
+    font-size: 90px;
+    line-height: 100px;
+    letter-spacing: 3px;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, 0%);
+    color: #FFDF2B;
+  }
+
+.camp_banner .yellow_banner_title .yellow_span{
+  text-fill-color: transparent;
+  text-stroke: 3px #FFDF2B;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 3px #FFDF2B;
+  -moz-text-fill-color: transparent;
+}
+
+
+.camp_video{
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
+}
+
+#available-form p:nth-child(2){
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+#available-form p:nth-child(3){
+  display: none;
+}
+
+
+#booking-form p{
+ padding-bottom: 10px;
+ display: block;
+ margin: auto;
+}
+
+#available-form label, #booking-form label{
+  width: 100%;
+  max-width: 180px;
+  font-weight: bold;
+}
+
+#available-form input, #booking-form input, #booking-form select{
+  padding: 5px 10px;
+  width: 100%;
+  max-width: 260px;
+}
+
+#booking-form select, #id_booking_date{
+  cursor: pointer;
+}
+
+#booking-form button{
+  display: block;
+  margin: auto;
+}
+
+.camp_gallery img{
+  cursor: pointer;
+}
+
+/* Thank you Page */
+.thankyou_section{
+  padding: 100px 20px;
+}
+
+.thankyou_section img{
+  width: 100%;
+  max-width: 10%;
+}
+
+
+/* Camp Page */
+
+.all_camp_section{
+  padding: 120px 0px 80px;
+  height: 800px;
+}
+
+.all_camp_section .card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 350px;
+  min-height: 300px;
+  background: #FFF;
+  border-radius: 20px;
+  transition: 0.5s;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+}
+
+.all_camp_section .card:hover {
+  min-height: 440px;
+}
+
+.all_camp_section .card .img-box {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  max-width: 300px;
+  min-height: 220px;
+  background: #333;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.5s;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.container .card:hover .img-box {
+  top: -100px;
+  scale: 0.75;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+  left: 40%;
+  transform: translateX(-50%);
+}
+
+.all_camp_section .card .img-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.all_camp_section .card .content {
+  position: absolute;
+  top: 252px;
+  width: 100%;
+  height: 35px;
+  padding: 0 30px;
+  text-align: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.all_camp_section .card:hover .content {
+  top: 130px;
+  height: 250px;
+  /* height: 100%; */
+}
+
+.all_camp_section .card .content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.all_camp_section .card .content p {
+  color: #333;
+}
+
+.all_camp_section .card .content a {
+  position: relative;
+  top: 15px;
+  display: inline-block;
+  padding: 12px 25px;
+  text-decoration: none;
+  color: #FFF;
+  font-weight: 500;
+}
+
+.all_camp_section .card .content a:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 480px) {
+  .all_camp_section .card {
+      width: 230px;
+      border-radius: 15px;
+  }
+
+  .all_camp_section .card .img-box {
+      width: 185px;
+      border-radius: 10px;
+  }
+
+  .all_camp_section .card .content p {
+      font-size: 0.8rem;
+  }
+
+  .all_camp_section .card .content a {
+      font-size: 0.9rem;
+  }
+}
