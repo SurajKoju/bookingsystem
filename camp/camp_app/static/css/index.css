@@ -141,8 +141,6 @@ cursor: pointer;
     font-weight: bold;
 }
 
-
-
 .paragraph{
     font-family: 'Raleway Light ', sans-serif;
 }
@@ -405,6 +403,32 @@ cursor: pointer;
   opacity: 0.8;
 }
 
+
+.about_camp_img{
+  width: 100%;
+  max-width: 300px;
+}
+
+.about_section {
+  padding: 100px 0px;
+}
+
+
+@media screen and (max-width: 767px){
+  .welcome_section, .tiles_section, .camp_availability_form, .about_camp{
+    padding: 80px 10px;
+  }
+
+  .all_camp_section{
+    height: 100%;
+  }
+  .all_camp_section .card{
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* 
 @media (max-width: 480px) {
   .all_camp_section .card {
       width: 230px;
@@ -423,4 +447,4 @@ cursor: pointer;
   .all_camp_section .card .content a {
       font-size: 0.9rem;
   }
-}
+} */

@@ -3,15 +3,9 @@ from camp_app.models import *
 
 @admin.register(Booking)
 class BookingAdmin(admin.ModelAdmin):        
-    list_display = ['full_name', 'camp_name', 'booking_date', 'mobile_number', 'package', 'number_of_people', 'total_price', 'payment_method', 'email_address', 'completed']
+    list_display = ['full_name', 'camp_name', 'booking_date', 'mobile_number', 'package', 'number_of_people', 'total_price', 'email_address', 'completed']
     list_filter = ['booking_date']
     search_fields = ['mobile_number']
-    
-    # def get_payment_method(self, obj):
-    #     payment_choices = dict(Booking.PAYMENT_CHOICES)
-    #     return payment_choices.get(obj.payment_method, 'Unknown')
-    
-
 
 @admin.register(CompletedBooking)
 class CompletedBookingAdmin(admin.ModelAdmin):

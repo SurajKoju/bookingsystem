@@ -9,11 +9,6 @@ class Booking(models.Model):
     mobile_number = models.CharField(default = '', max_length=10, null=False)
     email_address = models.EmailField(default = '', blank=True, null=True)
     number_of_people = models.PositiveIntegerField(default=2, blank=False, null=False, validators=[MinValueValidator(1), MaxValueValidator(100)])
-    PAYMENT_CHOICES = [
-        ('ESEWA', 'Esewa'),
-        ('KHALTI', 'Khalti'),
-        ('ONCASH', 'On-Cash Payment'),
-    ]
     
     PACKAGE_CHOICES = [
         ('basic', 'Basic (Rs. 800 per person)'),
@@ -22,7 +17,6 @@ class Booking(models.Model):
     ]
 
     package = models.CharField(max_length=10, default = '', choices=PACKAGE_CHOICES, null=False)
-    payment_method = models.CharField(max_length=6, choices=PAYMENT_CHOICES, null=False)
     booking_date = models.DateField(null=True, blank=True)
     total_price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
     completed = models.BooleanField(default=False, editable=True)
