@@ -1,0 +1,21 @@
+{% load static %}
+{% include 'header.html' %}
+
+<div class = "about_section pb-0">
+    <div class = "container">
+        <div class = "row align-items-center">
+            <div class = "col-lg-8 col-md-6 col-md-12">
+                <h4 class = "title pb-3"><span class = "title_span">About</span> Us</h4>
+                <p class = "paragraph"> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem</p>                
+            </div>
+
+            <div class = "col-lg-4 col-md-6 col-md-12 right_section">
+                <img src = "{% static 'images/about_us.jpg' %}" class = "d-block m-auto about_camp_img">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% include 'inc/gmap.html' %}
+{% include 'footer.html' %}

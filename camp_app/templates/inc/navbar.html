@@ -1,0 +1,48 @@
+{% load static %}
+
+<div class = "bigscreen_navbar py-3">
+    <div class="container">
+      <div class = "row align-items-center">
+        <div class = "col-lg-7 col-md-6 col-sm-12 col-6">
+          <a href = "/">
+            <img src ="{% static 'images/camp_logo.png' %}" alt="best camp site in nepal" width = "60" class = "img-fluid">
+          </a>
+        </div>
+
+        <div class = "col-lg-5 col-md-6 col-sm-12 col-6">
+            <div class = "navbar_menu">
+                <div class = "d-lg-flex d-md-flex d-sm-flex d-none justify-content-around">
+                  <p class = "navmenu_links">
+                  <a href = "#">
+                    Home
+                  </a>
+                </p>
+                <p class = "navmenu_links">
+                  <a href = "{% url 'camp' %}">
+                    Camps
+                  </a>
+                </p>
+                <p class = "navmenu_links">
+                  <a href = "{% url 'about' %}">
+                    About Us
+                  </a> 
+                </p>
+
+                <p class = "navmenu_links">
+                  <a href = "#">
+                    Contact Us
+                  </a> 
+                </p>
+                </div>
+
+                <div class = "navmenu_icon d-lg-none d-md-none d-sm-none d-flex justify-content-end">
+                  hamburger
+                </div>
+            </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+

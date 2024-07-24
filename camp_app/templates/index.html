@@ -1,0 +1,120 @@
+{% load static %}
+{% include 'header.html' %}
+
+{% include 'inc/map.html' %}
+
+    {% comment %} Welcome Section {% endcomment %}
+    <div class = "welcome_section position-relative z-3">
+        {% comment %} <img src = "{% static 'images/animated_gif.gif' %}" class = "position-absolute bottom-0 end-0 z-n1"> {% endcomment %}
+
+        <div class = "container">            
+            <div class = "row justify-content-between align-items-center">
+                <div class = "col-lg-5 col-md-5 col-sm-12 pb-lg-0 pb-md-0 pb-sm-0 pb-4">
+                    <img src = "{% static 'images/Make a Memory.png' %}" alt="welcome" class = "img-fluid rounded-3">
+                </div>
+
+                <div class = "col-lg-6 col-md-7 col-sm-12">
+                    <h4 class = "title text-center pb-lg-5 pb-md-5 pb-sm-4 pb-3">
+                        Welcome to <span class = "title_span">XYZ Camp</span>
+                    </h4>
+        
+                    <div class = "description_container w-lg-75 w-md-75 w-sm-100 w-100 m-auto">
+                    <p class = "description pb-3">
+                        Step into the great outdoors and immerse yourself in nature's embrace at <span>XYZ Camping Site</span>. Nestled amidst serene landscapes and towering trees, our campsite offers the perfect escape from the hustle and bustle of daily life.
+                    </p>
+                    <p class = "description pb-3">
+                        Whether you're a seasoned camper or new to the adventure, there's something for everyone here. Explore scenic trails, indulge in campfire tales under the starlit sky, or simply unwind and reconnect with loved ones in the tranquil surroundings.
+                    </p>
+                    <p class = "description pb-3">
+                        At XYZ Camping Site, we prioritize your comfort and safety, providing well-maintained facilities and friendly staff to ensure your stay is nothing short of memorable.
+                    </p>
+                    <p class = "description pb-3">    
+                        So pack your gear, leave your worries behind, and embark on an unforgettable journey with us at XYZ Camping Site. We look forward to being a part of your outdoor adventures!
+                    </p>
+                </div>
+            </div>            
+        </div>
+    </div>
+</div>
+
+    {% comment %} Tiles {% endcomment %}
+    <div class="tiles_section">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12 pb-3 text-center">
+              <img src="{% static 'images/icons/tent.png' %}" class="img-fluid w-25">
+              <h4 class="h4_title py-2 text-center">Several <span class = "title_span">Camps</span></h4>
+              <p class="paragraph text-center">More than 3,200 camping, glamping and touring sites to choose from.</p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12 pb-3 text-center">
+              <img src="{% static 'images/icons/coins.png' %}" class="img-fluid w-25">
+              <h4 class="h4_title py-2 text-center"><span class = "title_span">Viable </span>Rates</h4>
+              <p class="paragraph text-center">Book with us and you'll always get the best rate, with deposits from just 15%.</p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12 pb-3 text-center">
+              <img src="{% static 'images/icons/schedule.png' %}" class="img-fluid w-25">
+              <h4 class="h4_title py-2 text-center"><span class = "title_span">No booking</span> fees</h4>
+              <p class="paragraph text-center">Convenience at no extra cost. We don't charge any booking fees.</p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12 pb-3 text-center">
+              <img src="{% static 'images/icons/handshake.png' %}" class="img-fluid w-25">
+              <h4 class="h4_title py-2 text-center">Secure and <span class = "title_span">trusted</span></h4>
+              <p class="paragraph text-center">Safe, secure and trusted by millions of campers since 2003.</p>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+    {% comment %} Slider Section {% endcomment %}
+    <div class="slider_section">
+        <div class="container-fluid">
+          <div class="row align-items-center justify-content-end">
+            <div class="col-lg-5 col-md-6 col-sm-12">
+              <div class="slider_content w-75">
+                <div class="title text-uppercase pb-2">
+                  WHO WE <span class = "title_span">ARE</span>
+                </div>
+                <h4 class="h4_title pb-4">Trusted Camping Experts </h4>
+                <p class="paragraph">Welcome to XYZ Camp, where the beauty of nature meets the joy of camping. Nestled in the heart of nature, our campsite is a haven for outdoor enthusiasts, families, and friends seeking unforgettable experiences in the great outdoors. At XYZ CAmp, we believe in the transformative power of nature. Our mission is to provide a serene and welcoming environment for everyone to connect with the wilderness, unwind, and create lasting memories. Whether you're a seasoned camper or a first-timer, our site offers a range of amenities and activities that cater to all levels of outdoor enthusiasts.</p>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 pe-0">
+                <div class="slideshow-container">
+                    <div class="mySlides">
+                      <img src = "{% static 'images/slider/gallery_image_1.jpg' %}" class="rounded-start img-fluid">
+                    </div>
+                  
+                    <div class="mySlides">
+                      <img src="{% static 'images/slider/gallery_image_2.jpg' %}" class="rounded-start img-fluid">
+                    </div>
+                  
+                    <div class="mySlides">
+                      <img src="{% static 'images/slider/gallery_image_3.jpg' %}" class="rounded-start img-fluid">
+                    </div>
+                  
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      {% comment %} Explore Section {% endcomment %}
+      <div class="explore_section">
+        <div class="container">
+          <div class="explore_content">
+            <h4 class="h4_title text-light"><span class = "title_span">Camp out</span> under the stars.</h4>
+            <p class="paragraph text-light pt-2 pb-4">Find a spot to see the stars with our International Dark Sky maps.</p>
+            <a href="#" class="text-light p-2 border border-light rounded">Select a Camp</a>
+          </div>
+        </div>
+      </div>
+
+
+      {% include 'inc/gmap.html' %}
+
+{% include 'footer.html' %}

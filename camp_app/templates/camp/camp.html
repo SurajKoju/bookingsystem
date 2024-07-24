@@ -1,0 +1,64 @@
+{% load static %}
+{% include 'header.html' %}
+
+
+
+<video class = "camp_video" src = "{% static 'video/camp_video_banner.mp4' %}" autoplay loop muted></video>
+
+
+<div class = "all_camp_section">
+<div class = "container">
+    <div class = "row justify-content-center">
+
+        <div class = "col-lg-4 col-md-4 col-sm-12">
+        <div class="card">
+    <div class="img-box">
+        <img src="{% static 'images/thumbnail.png' %}" class = "m-auto">
+    </div>
+    <div class="content">
+        <h4 class = "h4_title pb-1">Camp One</h2>
+        <p>
+            Our campsite is a haven for outdoor enthusiasts, families, and friends seeking unforgettable experiences in the great outdoors.
+        </p>
+        <a href="{% url 'camp_one' %}"><button>Book Now</button></a>
+    </div>
+</div>
+</div>
+
+<div class = "col-lg-4 col-md-4 col-sm-12">
+<div class="card">
+    <div class="img-box">
+        <img src="{% static 'images/thumbnail.png' %}">
+    </div>
+    <div class="content">
+        <h4 class = "h4_title pb-1">Camp Two</h4>
+        <p>
+            Our campsite is a haven for outdoor enthusiasts, families, and friends seeking unforgettable experiences in the great outdoors.
+        </p>
+        <a href="{% url 'camp_two' %}"><button>Book Now</button></a>
+    </div>
+</div>
+</div>
+
+<div class = "col-lg-4 col-md-4 col-sm-12">
+<div class="card">
+    <div class="img-box">
+        <img src="{% static 'images/thumbnail.png' %}">
+    </div>
+    <div class="content">
+        <h4 class = "h4_title pb-1">Camp Three</h4>
+        <p>
+            Our campsite is a haven for outdoor enthusiasts, families, and friends seeking unforgettable experiences in the great outdoors.
+        </p>
+        <a href="{% url 'camp_three' %}"><button>Book Now</button></a>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+{% include 'footer.html' %}

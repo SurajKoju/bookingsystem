@@ -1,0 +1,103 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); */
+@import url("index.css");
+@import url("footer.css");
+
+
+@font-face {
+  font-family: Libre_Franklin;
+  font-style: bold;
+  font-weight: 900;
+  src: url(../fonts/Libre_Franklin/LibreFranklin-Black.woff2) format('woff2');
+}
+
+/* latin */
+@font-face {
+  font-family: 'Raleway Thin';
+  font-style: thin;
+  font-weight: 100;
+  src: url(../fonts/Raleway/Raleway-Thin.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Raleway Light ';
+  font-style: light;
+  font-weight: 300;
+  src: url(../fonts/Raleway/Raleway-Light.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Raleway Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Raleway/Raleway-Regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Raleway Medium';
+  font-style: medium;
+  font-weight: 500;
+  src: url(../fonts/Raleway/Raleway-Medium.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Raleway SemiBold';
+  font-style: semibold;
+  font-weight: 600;
+  src: url(../fonts/Raleway/Raleway-SemiBold.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Raleway Bold';
+  font-style: bold;
+  font-weight: 700;
+  src: url(../fonts/Raleway/Raleway-Bold.woff2) format('woff2');
+}
+
+
+body{
+  font-family: 'Raleway Regular';
+}
+
+p, h1, h2, h3, h4, h5, h6{
+  margin: 0;
+}
+
+a{
+  text-decoration: none!important;
+  cursor: pointer;
+}
+
+button{
+  background: #E3533F;
+  padding: 10px 40px;
+  color: #fff;
+  border: 0;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  margin-top: 20px;
+}
+
+::selection {
+  background-color: #E3533F; /* Change to the desired background color */
+  color: #fff; /* Change to the desired text color */
+  font-weight: bold;
+}
+
+.app-camp_app.model-booking.change-list{
+  font-family: 'Raleway Medium', sans-serif;
+}
+
+.bigscreen_navbar{
+  background-color: #E3533F;
+}
+
+.navmenu_links a{
+  color: #000;
+  font-family: 'Raleway Medium', sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.navmenu_links a:hover{
+  color: #fff;
+}

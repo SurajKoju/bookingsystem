@@ -1,0 +1,20 @@
+{% load static %}
+{% include 'header.html' %}
+
+<div class = "thankyou_section">
+    <div class = "container">
+        <img src = "{% static 'images/camp_logo.png' %}" alt = "" class = "d-block m-auto pb-5 img-fluid">
+        <h2 class = "fw-bold text-center pb-5">Booking Request has been sent. We will get back to you soon and thank you for your patience.</h2>
+
+        <div class = "d-flex justify-content-center column-gap-3">
+        <a href = "/"><button class = "d-block m-auto">Homepage</button></a>
+        <a href = "/"><button class = "d-block m-auto">Contact Us</button></a>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+{% include 'footer.html' %}
